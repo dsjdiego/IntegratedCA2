@@ -37,6 +37,29 @@ public class MainMenu {
     }
 
     private static void manageStudents() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    Scanner scanner = new Scanner(System.in);
+    while (true) {
+        System.out.println("\nStudent Management:");
+        System.out.println("1. Add New Student");
+        System.out.println("2. View All Students");
+        System.out.println("3. Update Student");
+        System.out.println("4. Delete Student");
+        System.out.println("5. Back to Main Menu");
+        System.out.print("Enter your choice: ");
+
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1 -> addStudent();
+            case 2 -> viewStudents();
+            case 3 -> updateStudent();
+            case 4 -> deleteStudent();
+            case 5 -> {
+                return; // Exit the student management menu
+            }
+            default -> System.out.println("Invalid choice. Please enter a valid one.");
+        }
     }
+  }
 }
+
