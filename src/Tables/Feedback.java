@@ -18,6 +18,7 @@ public class Feedback {
     private String feedbackComment;
     private int feedbackRating;
 
+    // Constructor
     public Feedback(int feedbackId, int studentId, int courseId, Date feedbackDate, String feedbackComment, int feedbackRating) {
         this.feedbackId = feedbackId;
         this.studentId = studentId;
@@ -27,6 +28,7 @@ public class Feedback {
         this.feedbackRating = feedbackRating;
     }
 
+    // Getters and Setters
     public int getFeedbackId() {
         return feedbackId;
     }

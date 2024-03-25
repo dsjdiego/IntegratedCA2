@@ -18,6 +18,7 @@ public class Enrollment {
     private Date enrollmentDue;
     private Date enrollmentFinish;
 
+    // Constructor
     public Enrollment(int enrollmentId, int studentId, int courseId, int lecturerId, Date enrollmentDue, Date enrollmentFinish) {
         this.enrollmentId = enrollmentId;
         this.studentId = studentId;
@@ -27,22 +28,53 @@ public class Enrollment {
         this.enrollmentFinish = enrollmentFinish;
     }
 
-    public int getEnrollmentId() { return enrollmentId; }
-    public void setEnrollmentId(int enrollmentId) { this.enrollmentId = enrollmentId; }
+    // Getters and Setters
+    public int getEnrollmentId() { 
+        return enrollmentId; 
+    }
+    
+    public void setEnrollmentId(int enrollmentId) { 
+        this.enrollmentId = enrollmentId; 
+    }
 
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
+    public int getStudentId() { 
+        return studentId; 
+    }
+    
+    public void setStudentId(int studentId) { 
+        this.studentId = studentId; 
+    }
 
-    public int getCourseId() { return courseId; }
-    public void setCourseId(int courseId) { this.courseId = courseId; }
+    public int getCourseId() { 
+        return courseId; 
+    }
+    
+    public void setCourseId(int courseId) { 
+        this.courseId = courseId; 
+    }
 
-    public int getLecturerId() { return lecturerId; }
-    public void setLecturerId(int lecturerId) { this.lecturerId = lecturerId; }
+    public int getLecturerId() { 
+        return lecturerId; 
+    }
+    
+    public void setLecturerId(int lecturerId) { 
+        this.lecturerId = lecturerId; 
+    }
 
-    public Date getEnrollmentDue() { return enrollmentDue; }
-    public void setEnrollmentDue(Date enrollmentDue) { this.enrollmentDue = enrollmentDue; }
+    public Date getEnrollmentDue() { 
+        return enrollmentDue; 
+    }
+    
+    public void setEnrollmentDue(Date enrollmentDue) { 
+        this.enrollmentDue = enrollmentDue; 
+    }
 
-    public Date getEnrollmentFinish() { return enrollmentFinish; }
-    public void setEnrollmentFinish(Date enrollmentFinish) { this.enrollmentFinish = enrollmentFinish; }
+    public Date getEnrollmentFinish() { 
+        return enrollmentFinish; 
+    }
+    
+    public void setEnrollmentFinish(Date enrollmentFinish) { 
+        this.enrollmentFinish = enrollmentFinish; 
+    }
   }
   

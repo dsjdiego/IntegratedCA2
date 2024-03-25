@@ -20,7 +20,7 @@ public class Student {
         this.lastName = lastName;
     }
 
-    // Getter and Setter for id
+    // Getter and Setter
     public int getId() {
         return id;
     }
@@ -29,7 +29,6 @@ public class Student {
         this.id = id;
     }
 
-    // Getter and Setter for firstName
     public String getFirstName() {
         return firstName;
     }
@@ -38,7 +37,6 @@ public class Student {
         this.firstName = firstName;
     }
 
-    // Getter and Setter for lastName
     public String getLastName() {
         return lastName;
     }

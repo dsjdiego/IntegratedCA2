@@ -13,19 +13,36 @@ public class Grade {
     private int enrollmentId;
     private String grade;
 
+    // Constructor
     public Grade(int gradesId, int enrollmentId, String grade) {
         this.gradesId = gradesId;
         this.enrollmentId = enrollmentId;
         this.grade = grade;
     }
 
-    public int getGradesId() { return gradesId; }
-    public void setGradesId(int gradesId) { this.gradesId = gradesId; }
+    // Getter and Setter
+    public int getGradesId() { 
+        return gradesId; 
+    }
+    
+    public void setGradesId(int gradesId) { 
+        this.gradesId = gradesId; 
+    }
 
-    public int getEnrollmentId() { return enrollmentId; }
-    public void setEnrollmentId(int enrollmentId) { this.enrollmentId = enrollmentId; }
+    public int getEnrollmentId() { 
+        return enrollmentId; 
+    }
+    
+    public void setEnrollmentId(int enrollmentId) {
+        this.enrollmentId = enrollmentId; 
+    }
 
-    public String getGrade() { return grade; }
-    public void setGrade(String grade) { this.grade = grade; }
+    public String getGrade() {
+        return grade; 
+    }
+    
+    public void setGrade(String grade) {
+        this.grade = grade; 
+    }
 }
 
