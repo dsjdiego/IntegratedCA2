@@ -4,6 +4,14 @@
  */
 package users;
 
+import Reports.CSVReportExporter;
+import Reports.ReportData;
+import Reports.ReportExporter;
+import Tables.Student;
+import db.StudentDB;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -91,8 +99,27 @@ public void manageUsers() {
         }
     }
 
+    public class AdminActions {
+        public static void exportStudentsReport() {
+        List<Student> students = StudentDB.getAllStudents(); // Retrieve students from the database
+        CSVReportExporter exporter = new CSVReportExporter();
+        exporter.exportReport(convertToReportData(students), "students_report.csv");
+        System.out.println("Exported the students report to students_report.csv.");
+        }
+
+        private static List<ReportData> convertToReportData(List<Student> students) {
+            List<ReportData> reportDataList = new ArrayList<>();
+            for (Student student : students) {
+                ReportData reportData = new ReportData();
+                reportData.setName(student.getName());
+                reportData.setGrade(student.getGrade());
+                reportDataList.add(reportData);
+            }
+            return reportDataList;
+        }
 
 public void addUser(String username, String password) {
         UserStorage.addUser(new Admin(username, password));
     }
+  }
 }

@@ -6,21 +6,27 @@ package Tables;
 
 /**
  *
- * @author User
+ * author User
  */
 public class Student {
     private int id;
     private String firstName;
     private String lastName;
     
-// Constructor
+    // Constructor with three parameters
     public Student(int id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
+    
+    // Constructor with two String parameters
+    public Student(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
-    // Getter and Setter
+    // Getter and Setter methods
     public int getId() {
         return id;
     }
