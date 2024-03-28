@@ -11,70 +11,70 @@ import java.util.Date;
  * @author User
  */
 public class Enrollment {
-    private int enrollmentId;
-    private int studentId;
-    private int courseId;
-    private int lecturerId;
-    private Date enrollmentDue;
-    private Date enrollmentFinish;
+    private int Enrollment_ID;
+    private int Student_ID;
+    private int Course_ID;
+    private int Lecturer_ID;
+    private Date Enrollment_Due;
+    private Date Enrollment_Finish;
 
     // Constructor
-    public Enrollment(int enrollmentId, int studentId, int courseId, int lecturerId, Date enrollmentDue, Date enrollmentFinish) {
-        this.enrollmentId = enrollmentId;
-        this.studentId = studentId;
-        this.courseId = courseId;
-        this.lecturerId = lecturerId;
-        this.enrollmentDue = enrollmentDue;
-        this.enrollmentFinish = enrollmentFinish;
+    public Enrollment(int Enrollment_ID, int Student_ID, int Course_ID, int Lecturer_ID, Date Enrollment_Due, Date Enrollment_Finish) {
+        this.Enrollment_ID = Enrollment_ID;
+        this.Student_ID = Student_ID;
+        this.Course_ID = Course_ID;
+        this.Lecturer_ID = Lecturer_ID;
+        this.Enrollment_Due = Enrollment_Due;
+        this.Enrollment_Finish = Enrollment_Finish;
     }
 
     // Getters and Setters
     public int getEnrollmentId() { 
-        return enrollmentId; 
+        return Enrollment_ID; 
     }
     
-    public void setEnrollmentId(int enrollmentId) { 
-        this.enrollmentId = enrollmentId; 
+    public void setEnrollmentId(int Enrollment_ID) { 
+        this.Enrollment_ID = Enrollment_ID; 
     }
 
     public int getStudentId() { 
-        return studentId; 
+        return Student_ID; 
     }
     
-    public void setStudentId(int studentId) { 
-        this.studentId = studentId; 
+    public void setStudentId(int Student_ID) { 
+        this.Student_ID = Student_ID; 
     }
 
     public int getCourseId() { 
-        return courseId; 
+        return Course_ID; 
     }
     
-    public void setCourseId(int courseId) { 
-        this.courseId = courseId; 
+    public void setCourseId(int Course_ID) { 
+        this.Course_ID = Course_ID; 
     }
 
     public int getLecturerId() { 
-        return lecturerId; 
+        return Lecturer_ID; 
     }
     
-    public void setLecturerId(int lecturerId) { 
-        this.lecturerId = lecturerId; 
+    public void setLecturerId(int Lecturer_ID) { 
+        this.Lecturer_ID = Lecturer_ID; 
     }
 
     public Date getEnrollmentDue() { 
-        return enrollmentDue; 
+        return Enrollment_Due; 
     }
     
-    public void setEnrollmentDue(Date enrollmentDue) { 
-        this.enrollmentDue = enrollmentDue; 
+    public void setEnrollmentDue(Date Enrollment_Due) { 
+        this.Enrollment_Due = Enrollment_Due; 
     }
 
     public Date getEnrollmentFinish() { 
-        return enrollmentFinish; 
+        return Enrollment_Finish; 
     }
     
-    public void setEnrollmentFinish(Date enrollmentFinish) { 
-        this.enrollmentFinish = enrollmentFinish; 
+    public void setEnrollmentFinish(Date Enrollment_Finish) { 
+        this.Enrollment_Finish = Enrollment_Finish; 
     }
   }
   

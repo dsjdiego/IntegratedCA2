@@ -9,40 +9,40 @@ package Tables;
  * @author User
  */
 public class Grade {
-    private int gradesId;
-    private int enrollmentId;
-    private String grade;
+    private int Grades_ID;
+    private int Enrollment_ID;
+    private String Grade;
 
     // Constructor
-    public Grade(int gradesId, int enrollmentId, String grade) {
-        this.gradesId = gradesId;
-        this.enrollmentId = enrollmentId;
-        this.grade = grade;
+    public Grade(int Grades_ID, int Enrollment_ID, String Grade) {
+        this.Grades_ID = Grades_ID;
+        this.Enrollment_ID = Enrollment_ID;
+        this.Grade = Grade;
     }
 
     // Getter and Setter
-    public int getGradesId() { 
-        return gradesId; 
+    public int getGrades_ID() { 
+        return Grades_ID; 
     }
     
-    public void setGradesId(int gradesId) { 
-        this.gradesId = gradesId; 
+    public void setGrades_ID(int Grades_ID) { 
+        this.Grades_ID = Grades_ID; 
     }
 
-    public int getEnrollmentId() { 
-        return enrollmentId; 
+    public int getEnrollment_ID() { 
+        return Enrollment_ID; 
     }
     
-    public void setEnrollmentId(int enrollmentId) {
-        this.enrollmentId = enrollmentId; 
+    public void setEnrollment_ID(int Enrollment_ID) {
+        this.Enrollment_ID = Enrollment_ID; 
     }
 
     public String getGrade() {
-        return grade; 
+        return Grade; 
     }
     
-    public void setGrade(String grade) {
-        this.grade = grade; 
+    public void setGrade(String Grade) {
+        this.Grade = Grade; 
     }
 }
 

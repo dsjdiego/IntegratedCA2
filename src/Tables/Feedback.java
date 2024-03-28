@@ -11,70 +11,70 @@ import java.util.Date;
  * @author User
  */
 public class Feedback {
-    private int feedbackId;
-    private int studentId;
-    private int courseId;
-    private Date feedbackDate;
-    private String feedbackComment;
-    private int feedbackRating;
+    private int Feedback_ID;
+    private int Student_ID;
+    private int Course_ID;
+    private Date Feedback_Date;
+    private String Feedback_Comment;
+    private int Feedback_Rating;
 
     // Constructor
-    public Feedback(int feedbackId, int studentId, int courseId, Date feedbackDate, String feedbackComment, int feedbackRating) {
-        this.feedbackId = feedbackId;
-        this.studentId = studentId;
-        this.courseId = courseId;
-        this.feedbackDate = feedbackDate;
-        this.feedbackComment = feedbackComment;
-        this.feedbackRating = feedbackRating;
+    public Feedback(int Feedback_ID, int Student_ID, int Course_ID, Date Feedback_Date, String Feedback_Comment, int Feedback_Rating) {
+        this.Feedback_ID = Feedback_ID;
+        this.Student_ID = Student_ID;
+        this.Course_ID = Course_ID;
+        this.Feedback_Date = Feedback_Date;
+        this.Feedback_Comment = Feedback_Comment;
+        this.Feedback_Rating = Feedback_Rating;
     }
 
     // Getters and Setters
-    public int getFeedbackId() {
-        return feedbackId;
+    public int getFeedback_ID() {
+        return Feedback_ID;
     }
 
-    public void setFeedbackId(int feedbackId) {
-        this.feedbackId = feedbackId;
+    public void setFeedback_ID(int Feedback_ID) {
+        this.Feedback_ID = Feedback_ID;
     }
 
-    public int getStudentId() {
-        return studentId;
+    public int getStudent_ID() {
+        return Student_ID;
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setStudent_ID(int Student_ID) {
+        this.Student_ID = Student_ID;
     }
 
-    public int getCourseId() {
-        return courseId;
+    public int getCourse_ID() {
+        return Course_ID;
     }
 
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
+    public void setCourse_ID(int Course_ID) {
+        this.Course_ID = Course_ID;
     }
 
-    public Date getFeedbackDate() {
-        return feedbackDate;
+    public Date getFeedback_Date() {
+        return Feedback_Date;
     }
 
-    public void setFeedbackDate(Date feedbackDate) {
-        this.feedbackDate = feedbackDate;
+    public void setFeedback_Date(Date Feedback_Date) {
+        this.Feedback_Date = Feedback_Date;
     }
 
-    public String getFeedbackComment() {
-        return feedbackComment;
+    public String getFeedback_Comment() {
+        return Feedback_Comment;
     }
 
-    public void setFeedbackComment(String feedbackComment) {
-        this.feedbackComment = feedbackComment;
+    public void setFeedback_Comment(String Feedback_Comment) {
+        this.Feedback_Comment = Feedback_Comment;
     }
 
-    public int getFeedbackRating() {
-        return feedbackRating;
+    public int getFeedback_Rating() {
+        return Feedback_Rating;
     }
 
-    public void setFeedbackRating(int feedbackRating) {
-        this.feedbackRating = feedbackRating;
+    public void setFeedback_Rating(int Feedback_Rating) {
+        this.Feedback_Rating = Feedback_Rating;
     }
 }
 

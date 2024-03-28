@@ -6,7 +6,6 @@ package users;
 
 import Reports.CSVReportExporter;
 import Reports.ReportData;
-import Reports.ReportExporter;
 import Tables.Student;
 import db.StudentDB;
 
@@ -25,6 +24,7 @@ public class Admin extends User {
         super(username, password, "Admin");
     }
     
+    @Override
     public String getUsername() {
         return super.getUsername();
     }
@@ -111,15 +111,16 @@ public void manageUsers() {
             List<ReportData> reportDataList = new ArrayList<>();
             for (Student student : students) {
                 ReportData reportData = new ReportData();
-                reportData.setName(student.getName());
-                reportData.setGrade(student.getGrade());
+                reportData.setFirstName(student.getFirst_Name());
+                reportData.setLastName(student.getLast_Name());
+                reportData.setGrade(student.getGrade().toString()); // Convert Grade object to string
                 reportDataList.add(reportData);
             }
             return reportDataList;
         }
 
-public void addUser(String username, String password) {
-        UserStorage.addUser(new Admin(username, password));
+    public void addUser(String username, String password) {
+            UserStorage.addUser(new Admin(username, password));
+        }
     }
-  }
 }

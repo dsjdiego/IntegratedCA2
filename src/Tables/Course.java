@@ -9,21 +9,21 @@ package Tables;
  * @author User
  */
 public class Course {
-  private int courseId;
-    private int lecturerId;
-    private String courseName;
-    private String courseProgram;
-    private String courseRoom;
-    private boolean isOnline;
+  private int Course_ID;
+    private int Lecturer_ID;
+    private String Course_Name;
+    private String Course_Program;
+    private String Course_Room;
+    private boolean Is_Online;
 
     // Constructor
-    public Course(int courseId, int lecturerId, String courseName, String courseProgram, String courseRoom, boolean isOnline) {
-        this.courseId = courseId;
-        this.lecturerId = lecturerId;
-        this.courseName = courseName;
-        this.courseProgram = courseProgram;
-        this.courseRoom = courseRoom;
-        this.isOnline = isOnline;
+    public Course(int Course_ID, int Lecturer_ID, String Course_Name, String Course_Program, String Course_Room, boolean Is_Online) {
+        this.Course_ID = Course_ID;
+        this.Lecturer_ID = Lecturer_ID;
+        this.Course_Name = Course_Name;
+        this.Course_Program = Course_Program;
+        this.Course_Room = Course_Room;
+        this.Is_Online = Is_Online;
     }
 
     public Course() {
@@ -32,51 +32,51 @@ public class Course {
 
     // Getters and Setters
     public int getCourseId() {
-        return courseId;
+        return Course_ID;
     }
 
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
+    public void setCourseId(int Course_ID) {
+        this.Course_ID = Course_ID;
     }
 
     public int getLecturerId() {
-        return lecturerId;
+        return Lecturer_ID;
     }
 
-    public void setLecturerId(int lecturerId) {
-        this.lecturerId = lecturerId;
+    public void setLecturerId(int Lecturer_ID) {
+        this.Lecturer_ID = Lecturer_ID;
     }
 
     public String getCourseName() {
-        return courseName;
+        return Course_Name;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setCourseName(String Course_Name) {
+        this.Course_Name = Course_Name;
     }
 
     public String getCourseProgram() {
-        return courseProgram;
+        return Course_Program;
     }
 
-    public void setCourseProgram(String courseProgram) {
-        this.courseProgram = courseProgram;
+    public void setCourseProgram(String Course_Program) {
+        this.Course_Program = Course_Program;
     }
 
     public String getCourseRoom() {
-        return courseRoom;
+        return Course_Room;
     }
 
-    public void setCourseRoom(String courseRoom) {
-        this.courseRoom = courseRoom;
+    public void setCourseRoom(String Course_Room) {
+        this.Course_Room = Course_Room;
     }
 
     public boolean isOnline() {
-        return isOnline;
+        return Is_Online;
     }
 
-    public void setOnline(boolean isOnline) {
-        this.isOnline = isOnline;
+    public void setOnline(boolean Is_Online) {
+        this.Is_Online = Is_Online;
     }
 }
 

@@ -68,9 +68,6 @@ public class UserStorage {
     }
 
 
-@SuppressWarnings("unused")
-private String password;
-
 public static void deleteUser(String deleteUsername) {
     String sql = "DELETE FROM users WHERE username = ?";
     try (Connection conn = DBConnection.getConnection();
@@ -105,6 +102,8 @@ public static Map<String, UserStorage> getAllUsers() {
     return users;
 }
 
+@SuppressWarnings("unused")
+private String password;
 private void setPassword(String password) {
     this.password = password;
 }

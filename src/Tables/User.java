@@ -9,48 +9,48 @@ package Tables;
  * @author User
  */
 public class User {
-    private int userId;
-    private String userName;
-    private String password;
-    private String typeUser;
+    private int User_ID;
+    private String User_name;
+    private String Password;
+    private String Type_User;
 
-    public User(int userId, String userName, String password, String typeUser) {
-        this.userId = userId;
-        this.userName = userName;
-        this.password = password;
-        this.typeUser = typeUser;
+    public User(int User_ID, String User_name, String Password, String Type_User) {
+        this.User_ID = User_ID;
+        this.User_name = User_name;
+        this.Password = Password;
+        this.Type_User = Type_User;
     }
 
     // Getters and Setters
-    public int getUserId() { 
-        return userId; 
+    public int getUser_ID() { 
+        return User_ID; 
     }
     
-    public void setUserId(int userId) { 
-        this.userId = userId; 
+    public void setUser_ID(int User_ID) { 
+        this.User_ID = User_ID; 
     }
     
-    public String getUserName() { 
-        return userName; 
+    public String getUser_name() { 
+        return User_name; 
     }
     
-    public void setUserName(String userName) { 
-        this.userName = userName; 
+    public void setUser_name(String User_name) { 
+        this.User_name = User_name; 
     }
     
     public String getPassword() { 
-        return password; 
+        return Password; 
     }
     
-    public void setPassword(String password) { 
-        this.password = password; 
+    public void setPassword(String Password) { 
+        this.Password = Password; 
     }
     
-    public String getTypeUser() { 
-        return typeUser; 
+    public String getType_User() { 
+        return Type_User; 
     }
     
-    public void setTypeUser(String typeUser) { 
-        this.typeUser = typeUser; 
+    public void setType_User(String Type_User) { 
+        this.Type_User = Type_User; 
     }
 }
