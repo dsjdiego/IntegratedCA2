@@ -17,23 +17,42 @@ public class CourseReportGenerator implements ReportGenerator {
 
     @Override
     public void generateReport() {
-        String query = "SELECT courseName, courseProgram, lecturerId, courseRoom, isOnline FROM courses;";
+        String query = "SELECT Course_Name, Course_Program, Lecturer_ID, Course_Room, Is_Online FROM courses;";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(query);
              ResultSet rs = pstmt.executeQuery()) {
 
             System.out.println("Course Report");
             while (rs.next()) {
-                String onlineStatus = rs.getBoolean("isOnline") ? "Online" : "In-person";
-                System.out.println("Course Name: " + rs.getString("courseName") + 
-                                   ", Program: " + rs.getString("courseProgram") +
-                                   ", Lecturer ID: " + rs.getInt("lecturerId") +
-                                   ", Room: " + rs.getString("courseRoom") +
+                String onlineStatus = rs.getBoolean("Is_Online") ? "Online" : "In-person";
+                System.out.println("Course Name: " + rs.getString("Course_Name") + 
+                                   ", Program: " + rs.getString("Course_Program") +
+                                   ", Lecturer ID: " + rs.getInt("Lecturer_ID") +
+                                   ", Room: " + rs.getString("Course_Room") +
                                    ", Mode: " + onlineStatus);
             }
         } catch (Exception e) {
             System.out.println("Error generating course report: " + e.getMessage());
         }
     }
+
+public void generateCourseReportWithFeedback() {
+    String query = "SELECT c.Course_Name, c.Course_Program, l.First_Name AS Lecturer_First_Name, l.Last_Name AS Lecturer_Last_Name, c.Course_Room, c.Is_Online " +
+                    "FROM Courses c " +
+                    "JOIN Lecturers l ON c.Lecturer_ID = l.Lecturer_ID;";
+
+    try (Connection conn = DBConnection.getConnection();
+         PreparedStatement pstmt = conn.prepareStatement(query);
+         ResultSet rs = pstmt.executeQuery()) {
+
+        System.out.println("Course Report with Feedback");
+        while (rs.next()) {
+            System.out.println("Course Name: " + rs.getString("Course_Name") + 
+                               ", Average Rating: " + rs.getDouble("avgRating"));
+        }
+    } catch (Exception e) {
+        System.out.println("Error generating course report with feedback: " + e.getMessage());
+    }
+  }
 }
 

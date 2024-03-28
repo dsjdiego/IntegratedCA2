@@ -17,12 +17,12 @@ public class StudentReportGenerator implements ReportGenerator {
    
     @Override
     public void generateReport() {
-        String query = "SELECT s.studentID, s.firstName, s.lastName, c.courseName, g.grade " +
-                       "FROM students s " +
-                       "JOIN enrollments e ON s.studentID = e.studentID " +
-                       "JOIN courses c ON e.courseID = c.courseID " +
-                       "LEFT JOIN grades g ON e.enrollmentID = g.enrollmentID " +
-                       "ORDER BY s.studentID, c.courseName;";
+        String query = "SELECT s.Student_ID, s.First_Name, s.Last_Name, c.Course_Name, g.Grade " +
+                        "FROM Students s " +
+                        "JOIN Enrollments e ON s.Student_ID = e.Student_ID " +
+                        "JOIN Courses c ON e.Course_ID = c.Course_ID " +
+                        "LEFT JOIN Grades g ON e.Enrollment_ID = g.Enrollment_ID " +
+                        "ORDER BY s.Student_ID, c.Course_Name;";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(query);
@@ -30,10 +30,10 @@ public class StudentReportGenerator implements ReportGenerator {
 
             System.out.println("Student Report");
             while (rs.next()) {
-                System.out.println("Student ID: " + rs.getInt("studentID") + 
-                                   ", Name: " + rs.getString("firstName") + " " + rs.getString("lastName") +
-                                   ", Course: " + rs.getString("courseName") +
-                                   ", Grade: " + rs.getString("grade"));
+                System.out.println("Student ID: " + rs.getInt("Student_ID") + 
+                                   ", Name: " + rs.getString("First_Name") + " " + rs.getString("Last_Name") +
+                                   ", Course: " + rs.getString("Course_Name") +
+                                   ", Grade: " + rs.getString("Grade"));
             }
         } catch (Exception e) {
             System.out.println("Error generating student report: " + e.getMessage());

@@ -17,11 +17,11 @@ public class LecturerReportGenerator implements ReportGenerator {
    
     @Override
     public void generateReport() {
-        String query = "SELECT l.lecturerID, l.firstName, l.lastName, c.courseName, COUNT(e.studentID) AS enrolledStudents " +
-                       "FROM lecturers l " +
-                       "JOIN courses c ON l.lecturerID = c.lecturerID " +
-                       "LEFT JOIN enrollments e ON c.courseID = e.courseID " +
-                       "GROUP BY c.courseID;";
+        String query = "SELECT l.Lecturer_ID, l.First_Name, l.Last_Name, c.Course_Name, COUNT(e.Student_ID) AS enrolledStudents " +
+                        "FROM Lecturers l " +
+                        "JOIN Courses c ON l.Lecturer_ID = c.Lecturer_ID " +
+                        "LEFT JOIN Enrollments e ON c.Course_ID = e.Course_ID " +
+                        "GROUP BY c.Course_ID;";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(query);
@@ -29,8 +29,8 @@ public class LecturerReportGenerator implements ReportGenerator {
 
             System.out.println("Lecturer Report");
             while (rs.next()) {
-                System.out.println("Lecturer: " + rs.getString("firstName") + " " + rs.getString("lastName") +
-                                   ", Course: " + rs.getString("courseName") +
+                System.out.println("Lecturer: " + rs.getString("First_Name") + " " + rs.getString("Last_Name") +
+                                   ", Course: " + rs.getString("Course_Name") +
                                    ", Enrolled Students: " + rs.getInt("enrolledStudents"));
             }
         } catch (Exception e) {

@@ -4,12 +4,12 @@
  */
 package Reports;
 
+import java.util.List;
+
 /**
  *
  * @author User
  */
-public interface ReportGenerator {
-    void generateReport();
+public interface ReportExporter {
+    void exportReport(List<ReportData> data, String format);
 }
-
-
