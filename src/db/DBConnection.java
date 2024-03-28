@@ -14,11 +14,16 @@ import java.sql.SQLException;
  */
 
 public class DBConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/IntegratedCA2?useSSL=false";
+    private static final String URL = "jdbc:mysql://localhost:3306/integratedca2";
     private static final String USER = "root";
     private static final String PASSWORD = "Di101010@";
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASSWORD);
-    }
-}    
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+            } catch (ClassNotFoundException | SQLException e) {
+                return null;
+            }
+    } 
+}   
