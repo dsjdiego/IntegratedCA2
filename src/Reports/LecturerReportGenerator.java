@@ -15,6 +15,7 @@ import java.sql.ResultSet;
  */
 public class LecturerReportGenerator implements ReportGenerator {
    
+    // This implementation gathers and prints a report about lecturers
     @Override
     public void generateReport() {
         String query = "SELECT l.Lecturer_ID, l.First_Name, l.Last_Name, c.Course_Name, COUNT(e.Student_ID) AS enrolledStudents " +

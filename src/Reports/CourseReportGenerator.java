@@ -13,8 +13,11 @@ import java.sql.ResultSet;
  *
  * @author User
  */
+
+// This class is designed to generate reports related to courses
 public class CourseReportGenerator implements ReportGenerator {
 
+    // This method generates a basic report listing details of all courses.
     @Override
     public void generateReport() {
         String query = "SELECT Course_Name, Course_Program, Lecturer_ID, Course_Room, Is_Online FROM courses;";
@@ -35,24 +38,4 @@ public class CourseReportGenerator implements ReportGenerator {
             System.out.println("Error generating course report: " + e.getMessage());
         }
     }
-
-public void generateCourseReportWithFeedback() {
-    String query = "SELECT c.Course_Name, c.Course_Program, l.First_Name AS Lecturer_First_Name, l.Last_Name AS Lecturer_Last_Name, c.Course_Room, c.Is_Online " +
-                    "FROM Courses c " +
-                    "JOIN Lecturers l ON c.Lecturer_ID = l.Lecturer_ID;";
-
-    try (Connection conn = DBConnection.getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(query);
-         ResultSet rs = pstmt.executeQuery()) {
-
-        System.out.println("Course Report with Feedback");
-        while (rs.next()) {
-            System.out.println("Course Name: " + rs.getString("Course_Name") + 
-                               ", Average Rating: " + rs.getDouble("avgRating"));
-        }
-    } catch (Exception e) {
-        System.out.println("Error generating course report with feedback: " + e.getMessage());
-    }
-  }
 }
-

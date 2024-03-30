@@ -14,6 +14,7 @@ import java.sql.SQLException;
  */
 public class EnrollmentDB {
 
+    // Method to add a new enrollment record to the database.
     public static void addEnrollment(int Student_ID, int Course_ID) {
         String sql = "INSERT INTO enrollments (studentId, courseId) VALUES (?, ?);";
         try (Connection conn = DBConnection.getConnection();
@@ -27,6 +28,7 @@ public class EnrollmentDB {
         }
     }
 
+    // Method to update an existing enrollment record in the database.
     public static void updateEnrollment(int Enrollment_ID, int Student_ID, int Course_ID) {
         String sql = "UPDATE enrollments SET studentId = ?, courseId = ? WHERE id = ?;";
         try (Connection conn = DBConnection.getConnection();
@@ -41,6 +43,7 @@ public class EnrollmentDB {
         }
     }
 
+    // Method to delete an enrollment record from the database.
     public static void deleteEnrollment(int Enrollment_ID) {
         String sql = "DELETE FROM enrollments WHERE id = ?;";
         try (Connection conn = DBConnection.getConnection();

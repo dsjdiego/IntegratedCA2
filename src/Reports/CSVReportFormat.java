@@ -12,15 +12,17 @@ import java.util.List;
  *
  * @author User
  */
-public class CSVReportFormat implements ReportFormat {
 
+public class CSVReportFormat implements ReportFormat {
     private List<String> data;
 
+    // Overrides the generateReport method from the ReportFormat interface.
     @Override
     public void generateReport(List<String> data) {
         this.data = data;
     }
 
+    // This method is responsible for saving the report data to a file with the given fileName.
     @Override
     public void saveReport(String fileName) {
         try (FileWriter writer = new FileWriter(fileName)) {

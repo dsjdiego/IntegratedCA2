@@ -15,11 +15,13 @@ import java.sql.ResultSet;
  */
 public class Lecturer extends User {
 
+    // Constructor for creating a Lecturer object.
     public Lecturer(String username, String password) {
         super(username, password, "Lecturer");
     }
 
-   public void listMyCourses() {
+    // Method to list all courses associated with the lecturer.
+    public void listMyCourses() {
         String sql = "SELECT courseName FROM courses WHERE lecturerId = (SELECT id FROM users WHERE username = ? AND role = 'Lecturer')";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -32,6 +34,4 @@ public class Lecturer extends User {
             System.out.println("Error listing courses: " + e.getMessage());
         }
     }
-
-    // Placeholder for other lecturer-specific functionalities
 }

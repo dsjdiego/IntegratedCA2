@@ -17,6 +17,8 @@ import java.util.List;
  * @author User
  */
 public class CourseDB {
+    
+    // SQL query to update course name and online status based on the course ID.
     public static void updateCourse(int Course_ID, String newCourse_Name, boolean Is_Online) {
         String sql = "UPDATE courses SET courseName = ?, isOnline = ? WHERE Course_ID = ?;";
 
@@ -38,6 +40,7 @@ public class CourseDB {
         }
     }
     
+    // Static method to retrieve and return a list of all courses from the database.
     public static List<Course> viewCourses() {
         List<Course> courses = new ArrayList<>();
         String sql = "SELECT * FROM courses;";

@@ -14,6 +14,8 @@ import db.StudentDB;
  * @author User
  */
 public class MainMenu {
+    
+    // Displays the main menu of the College Management System and handles user input.
     public static void show() {
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
@@ -24,9 +26,9 @@ public class MainMenu {
 
                 int choice = scanner.nextInt();
 
+                // Handles the user's menu selection.
                 switch (choice) {
                     case 1 -> {
-                        // Call a method to manage students
                         System.out.println("Student Management");
                         manageStudents();
                     }
@@ -39,7 +41,8 @@ public class MainMenu {
             }
         }
     }
-
+    
+    // A method that provides a submenu for managing student records.
     private static void manageStudents() {
     try (Scanner scanner = new Scanner(System.in)) {
         while (true) {
@@ -53,6 +56,7 @@ public class MainMenu {
 
             int choice = scanner.nextInt();
 
+            // Processes the user's selection for student management.
             switch (choice) {
                 case 1 -> addStudent();
                 case 2 -> viewStudents();
@@ -67,6 +71,7 @@ public class MainMenu {
     }
   }
 
+    // A method to add a new student to the database.
     private static void addStudent() {
         String firstName;
         String lastName;
@@ -81,12 +86,13 @@ public class MainMenu {
             return; // Exit the method if validation fails
         }
 
+        // Adds the new student to the database.
         StudentDB.addNewStudent(new Student(firstName, lastName));
         System.out.println("Student added successfully!");
   }
 
+    // A method to display all students from the database.
     private static void viewStudents() {
-        // Call your database method to retrieve all students
         List<Student> students = StudentDB.getAllStudents();
         
         // Iterate over the list of students and print their details
@@ -94,11 +100,11 @@ public class MainMenu {
             System.out.println("Student ID: " + student.getStudent_ID());
             System.out.println("First Name: " + student.getFirst_Name());
             System.out.println("Last Name: " + student.getLast_Name());
-            // Print other student details as needed
             System.out.println("--------------------");
         }
     }
 
+    // A method to update existing student information in the database.
     private static void updateStudent() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter student ID: ");
@@ -114,6 +120,7 @@ public class MainMenu {
         }
     }
 
+    // A method to delete a student from the database based on their ID.
     private static void deleteStudent() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter student ID: ");
@@ -121,7 +128,6 @@ public class MainMenu {
             
             // Call your database method to delete the student
             StudentDB.deleteStudentById(Student_ID);
-            
             System.out.println("Student deleted successfully!");
         }
     }

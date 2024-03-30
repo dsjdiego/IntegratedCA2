@@ -14,6 +14,7 @@ public class User {
     private String Password;
     private String Type_User;
 
+    //Constructor
     public User(int User_ID, String User_name, String Password, String Type_User) {
         this.User_ID = User_ID;
         this.User_name = User_name;

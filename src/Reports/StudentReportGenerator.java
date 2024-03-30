@@ -15,6 +15,7 @@ import java.sql.ResultSet;
  */
 public class StudentReportGenerator implements ReportGenerator {
    
+    // This method purpose is to generate reports specifically for student data.
     @Override
     public void generateReport() {
         String query = "SELECT s.Student_ID, s.First_Name, s.Last_Name, c.Course_Name, g.Grade " +

@@ -12,15 +12,18 @@ import java.util.List;
  *
  * @author User
  */
-public class TXTReportFormat implements ReportFormat {
 
+// This class is specifically designed to format and save reports as text files.
+public class TXTReportFormat implements ReportFormat {
     private List<String> data;
 
+    // This method is intended to prepare or set the report's data before saving it to a file.
     @Override
     public void generateReport(List<String> data) {
         this.data = data;
     }
 
+    // This method is responsible for writing the report's data to a file
     @Override
     public void saveReport(String fileName) {
         try (FileWriter writer = new FileWriter(fileName)) {
