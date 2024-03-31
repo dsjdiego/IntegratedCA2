@@ -6,8 +6,9 @@ package Menu;
 
 import users.*;
 import java.util.Scanner;
-
 import Reports.LecturerReportGenerator;
+import Reports.ReportContext;
+import Reports.ReportGenerator;
 import java.util.InputMismatchException;
 
 /**
@@ -15,6 +16,8 @@ import java.util.InputMismatchException;
  * @author User
  */
     public class Main {
+
+    private static ReportGenerator reportGenerator;
         
         // The main method
         public static void main(String[] args) {
@@ -67,8 +70,17 @@ import java.util.InputMismatchException;
                     case 4 -> back = true;
                     default -> System.out.println("Invalid choice. Please try again.");
                 }
+                ReportContext context = new ReportContext(reportGenerator);
+                context.executeGenerateReport();
+        
             }
         }
+        
+        
+
+        
+        
+        
         
         // Handles user login by prompting for username and password
         private static User loginUser(Scanner scanner) {

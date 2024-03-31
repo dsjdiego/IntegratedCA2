@@ -28,7 +28,7 @@ public class LecturerReportGenerator implements ReportGenerator {
              PreparedStatement pstmt = conn.prepareStatement(query);
              ResultSet rs = pstmt.executeQuery()) {
 
-            System.out.println("Lecturer Report");
+            System.out.println("Generating lecturer Report");
             while (rs.next()) {
                 System.out.println("Lecturer: " + rs.getString("First_Name") + " " + rs.getString("Last_Name") +
                                    ", Course: " + rs.getString("Course_Name") +

@@ -25,7 +25,7 @@ public class CourseReportGenerator implements ReportGenerator {
              PreparedStatement pstmt = conn.prepareStatement(query);
              ResultSet rs = pstmt.executeQuery()) {
 
-            System.out.println("Course Report");
+            System.out.println("Generating course Report");
             while (rs.next()) {
                 String onlineStatus = rs.getBoolean("Is_Online") ? "Online" : "In-person";
                 System.out.println("Course Name: " + rs.getString("Course_Name") + 

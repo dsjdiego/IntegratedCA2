@@ -29,7 +29,7 @@ public class StudentReportGenerator implements ReportGenerator {
              PreparedStatement pstmt = conn.prepareStatement(query);
              ResultSet rs = pstmt.executeQuery()) {
 
-            System.out.println("Student Report");
+            System.out.println("Generating student Report");
             while (rs.next()) {
                 System.out.println("Student ID: " + rs.getInt("Student_ID") + 
                                    ", Name: " + rs.getString("First_Name") + " " + rs.getString("Last_Name") +

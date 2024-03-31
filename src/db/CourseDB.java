@@ -42,8 +42,8 @@ public class CourseDB {
     
     // Static method to retrieve and return a list of all courses from the database.
     public static List<Course> viewCourses() {
-        List<Course> courses = new ArrayList<>();
         String sql = "SELECT * FROM courses;";
+        List<Course> courses = new ArrayList<>();
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -62,6 +62,7 @@ public class CourseDB {
             }
         } catch (SQLException e) {
             System.out.println("Error viewing courses: " + e.getMessage());
+            e.printStackTrace();
         }
         return courses;
     }

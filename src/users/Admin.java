@@ -4,13 +4,7 @@
  */
 package users;
 
-import Reports.CSVReportExporter;
-import Reports.ReportData;
-import Tables.Student;
-import db.StudentDB;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -100,30 +94,8 @@ public class Admin extends User {
                 }
             }
         }
-        // Inner class to define admin-specific actions like exporting reports.
-        public class AdminActions {
-            public static void exportStudentsReport() {
-            List<Student> students = StudentDB.getAllStudents(); // Retrieve students from the database
-            CSVReportExporter exporter = new CSVReportExporter();
-            exporter.exportReport(convertToReportData(students), "students_report.csv");
-            System.out.println("Exported the students report to students_report.csv.");
-            }
-
-            // Converts a list of Student objects into a format suitable for reporting.
-            private static List<ReportData> convertToReportData(List<Student> students) {
-                List<ReportData> reportDataList = new ArrayList<>();
-                for (Student student : students) {
-                    ReportData reportData = new ReportData();
-                    reportData.setFirstName(student.getFirst_Name());
-                    reportData.setLastName(student.getLast_Name());
-                    reportData.setGrade(student.getGrade().toString()); // Convert Grade object to string
-                    reportDataList.add(reportData);
-                }
-                return reportDataList;
-            }
 
         public void addUser(String username, String password) {
                 UserStorage.addUser(new Admin(username, password));
             }
         }
-    }
