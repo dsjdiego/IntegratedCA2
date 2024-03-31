@@ -4,6 +4,8 @@
  */
 package db;
 
+//GITHUB LINK: https://github.com/dsjdiego/IntegratedCA2.git
+
 import Tables.Course;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

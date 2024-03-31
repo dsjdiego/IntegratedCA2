@@ -4,6 +4,8 @@
  */
 package users;
 
+//GITHUB LINK: https://github.com/dsjdiego/IntegratedCA2.git
+
 import Reports.CourseReportGenerator;
 import Reports.LecturerReportGenerator;
 import Reports.ReportGenerator;

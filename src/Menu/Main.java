@@ -4,6 +4,8 @@
  */
 package Menu;
 
+//GITHUB LINK: https://github.com/dsjdiego/IntegratedCA2.git
+
 import users.*;
 import java.util.Scanner;
 import Reports.LecturerReportGenerator;
